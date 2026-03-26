@@ -17,7 +17,7 @@ export default function ForgotPassword() {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/forgotpassword', { email });
+      const res = await axios.post('/api/auth/forgotpassword', { email });
       setMessage(res.data.message || 'Reset link dispatched to your network node.');
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to locate user email.');

@@ -21,7 +21,7 @@ export default function ViewProfile() {
         if (isMyProfile) {
           setProfileData(currentUser);
         } else {
-          const res = await axios.get(`http://localhost:5000/api/users/${id}`);
+          const res = await axios.get(`/api/users/${id}`);
           setProfileData(res.data);
         }
       } catch (err) {

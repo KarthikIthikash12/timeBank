@@ -1,3 +1,4 @@
+
 import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
@@ -23,7 +24,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const resTeachers = await axios.get('http://localhost:5000/api/users/teachers', {
+        const resTeachers = await axios.get('/api/users/teachers', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
 
@@ -37,7 +38,7 @@ export default function Dashboard() {
           setTeachers([]);
         }
 
-        const resLedger = await axios.get('http://localhost:5000/api/users/ledger', {
+        const resLedger = await axios.get('/api/users/ledger', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
 
@@ -85,7 +86,7 @@ export default function Dashboard() {
     if (!selectedSlot) return toast.error("Please select a time slot first!"); 
     
     try {
-      const res = await axios.post('http://localhost:5000/api/users/book', {
+      const res = await axios.post('/api/users/book', {
         teacherId: selectedTeacher._id,
         duration: selectedTeacher.sessionDuration || 60,
         scheduledDate: selectedSlot 
@@ -111,7 +112,7 @@ export default function Dashboard() {
     console.log("FIRING ACTION:", action, "FOR ID:", sessionId);
 
     try {
-      const res = await axios.put(`http://localhost:5000/api/users/session/${sessionId}/status`, 
+      const res = await axios.put(`/api/users/session/${sessionId}/status`, 
         { status: action }, 
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );

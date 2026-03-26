@@ -47,7 +47,7 @@ export default function Exchange() {
   const handleSaveTeacherSettings = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put('http://localhost:5000/api/users/profile', {
+      const res = await axios.put('/api/users/profile', {
         sessionDuration: duration,
         availableSlots: slots,
         sessionTitle: sessionTitle, 

@@ -23,7 +23,7 @@ export default function Marketplace() {
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/users/teachers', {
+        const res = await axios.get('/api/users/teachers', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         
@@ -50,7 +50,7 @@ export default function Marketplace() {
     if (!selectedSlot) return toast.error("Please select a time slot first!");
     
     try {
-      const res = await axios.post('http://localhost:5000/api/users/book', {
+      const res = await axios.post('/api/users/book', {
         teacherId: selectedTeacher._id,
         duration: selectedTeacher.sessionDuration || 60, 
         scheduledDate: selectedSlot 

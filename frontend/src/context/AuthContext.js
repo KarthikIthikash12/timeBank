@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
       if (token) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         try {
-          const res = await axios.get('http://localhost:5000/api/users/profile');
+          const res = await axios.get('/api/users/profile');
           setUser(res.data); 
         } catch (error) {
           console.error("Session expired.");
@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   }, [token]); 
 
   const register = async (name, email, password) => {
-    const res = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
+    const res = await axios.post('/api/auth/register', { name, email, password });
     localStorage.setItem('token', res.data.token);
     axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
     
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+    const res = await axios.post('/api/auth/login', { email, password });
     localStorage.setItem('token', res.data.token);
     axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
     
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const googleSignIn = async (googleToken) => {
-    const res = await axios.post('http://localhost:5000/api/auth/google', { token: googleToken });
+    const res = await axios.post('/api/auth/google', { token: googleToken });
     localStorage.setItem('token', res.data.token);
     axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
     

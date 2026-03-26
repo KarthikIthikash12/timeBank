@@ -19,7 +19,7 @@ export default function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/users/ledger', {
+        const res = await axios.get('/api/users/ledger', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         if (res.data && Array.isArray(res.data.history)) {
@@ -46,7 +46,7 @@ export default function History() {
     if (rating === 0) return toast.error("Please select a star rating!");
 
     try {
-      await axios.post('http://localhost:5000/api/users/review', {
+      await axios.post('/api/users/review', {
         transactionId: reviewModalTx._id,
         rating: rating
       }, {

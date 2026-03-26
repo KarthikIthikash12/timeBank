@@ -35,7 +35,7 @@ export default function Profile() {
   const handleSaveProfile = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put('http://localhost:5000/api/users/profile', {
+      const res = await axios.put('/api/users/profile', {
         name,
         bio,
         skillsOffered: skills,
@@ -72,7 +72,7 @@ export default function Profile() {
     formData.append('image', selectedFile); 
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users/profile-picture', formData, {
+      const res = await axios.post('/api/users/profile-picture', formData, {
         headers: { 
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('token')}` 

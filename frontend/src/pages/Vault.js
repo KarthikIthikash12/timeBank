@@ -14,7 +14,7 @@ export default function Vault() {
   useEffect(() => {
     const fetchLedger = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/users/ledger', {
+        const res = await axios.get('/api/users/ledger', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         
@@ -43,7 +43,7 @@ export default function Vault() {
 
   const handleDeposit = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/users/deposit', {}, {
+      const res = await axios.post('/api/users/deposit', {}, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setUser({ ...user, timeBalance: res.data.newBalance });

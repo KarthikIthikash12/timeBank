@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import axios from 'axios';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 import { AuthContext } from './context/AuthContext';
 import Landing from './pages/Landing';
-import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register'; 
 import Dashboard from './pages/Dashboard';

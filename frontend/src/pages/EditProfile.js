@@ -31,7 +31,7 @@ export default function EditProfile() {
     formData.append('image', selectedFile); 
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users/profile-picture', formData, {
+      const res = await axios.post('/api/users/profile-picture', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}` 
