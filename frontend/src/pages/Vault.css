@@ -1,0 +1,131 @@
+.vault-container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.vault-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+  background-color: #f8fafc;
+}
+
+.vault-header {
+  margin-bottom: 2.5rem;
+}
+
+.vault-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  border-radius: 16px;
+  padding: 3rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
+}
+
+.balance-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.balance-amount {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+
+.balance-amount span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.deposit-action-btn {
+  background-color: white;
+  color: #8b5cf6;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.deposit-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ledger-section {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.ledger-section h2 {
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table th {
+  text-align: left;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.transaction-table td {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #0f172a;
+}
+
+.type-badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.type-earned {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+}
+
+.type-spent {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}

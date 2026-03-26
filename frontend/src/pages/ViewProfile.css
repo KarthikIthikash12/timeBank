@@ -1,0 +1,96 @@
+.view-profile-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.view-profile-content {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.public-profile-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+}
+
+.edit-action-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-action-btn:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.avatar-massive {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+.profile-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.stat-item h4 {
+  margin: 0 0 0.25rem 0;
+  color: #0f172a;
+  font-size: 1.5rem;
+}
+
+.stat-item p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
