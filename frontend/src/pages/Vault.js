@@ -41,17 +41,17 @@ export default function Vault() {
     navigate('/login');
   };
 
-  const handleDeposit = async () => {
-    try {
-      const res = await axios.post('/api/users/deposit', {}, {
-        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-      });
-      setUser({ ...user, timeBalance: res.data.newBalance });
-      toast.success('Success! 120 Mins minted to your vault.');
-    } catch (err) {
-      toast.error(err.response?.data?.message || 'Deposit failed.');
-    }
-  };
+  // const handleDeposit = async () => {
+  //   try {
+  //     const res = await axios.post('/api/users/deposit', {}, {
+  //       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+  //     });
+  //     setUser({ ...user, timeBalance: res.data.newBalance });
+  //     toast.success('Success! 120 Mins minted to your vault.');
+  //   } catch (err) {
+  //     toast.error(err.response?.data?.message || 'Deposit failed.');
+  //   }
+  // };
 
   const formatDate = (dateString) => {
     const options = { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };

@@ -15,8 +15,6 @@ export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState('');
   const [mySchedule, setMySchedule] = useState([]);
   const [selectedSlot, setSelectedSlot] = useState('');
-  const [activeTopTab, setActiveTopTab] = useState('explore');
-  const [faqOpenIndex, setFaqOpenIndex] = useState(null);
   const [showMobileSchedule, setShowMobileSchedule] = useState(false);
 
   const [incomingRequests, setIncomingRequests] = useState([]); 
@@ -112,10 +110,10 @@ export default function Dashboard() {
     console.log("FIRING ACTION:", action, "FOR ID:", sessionId);
 
     try {
-      const res = await axios.put(`/api/users/session/${sessionId}/status`, 
-        { status: action }, 
-        { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
-      );
+      // const res = await axios.put(`/api/users/session/${sessionId}/status`, 
+      //   { status: action }, 
+      //   { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
+      // );
       toast.success(`Session ${action}!`); 
       
       setTimeout(() => {

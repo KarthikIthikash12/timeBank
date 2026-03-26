@@ -13,7 +13,6 @@ export default function Exchange() {
   const [duration, setDuration] = useState(60);
   const [slots, setSlots] = useState([]);
   const [newSlot, setNewSlot] = useState('');
-  const [message, setMessage] = useState('');
   const [sessionTitle, setSessionTitle] = useState('');
   const [topics, setTopics] = useState('');
   const [category, setCategory] = useState('Programming');

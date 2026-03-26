@@ -18,7 +18,7 @@ export default function ResetPassword() {
     setError('');
 
     try {
-      const res = await axios.put(`/api/auth/resetpassword/${token}`, { password });
+      // const res = await axios.put(`/api/auth/resetpassword/${token}`, { password });
       
       setMessage('Cryptographic key updated successfully!');
       setTimeout(() => {
