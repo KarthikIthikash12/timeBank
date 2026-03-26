@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 import { AuthContext } from './context/AuthContext';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
@@ -23,7 +22,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import VideoRoom from './pages/VideoRoom';
 
-
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 function App() {
   const { user } = useContext(AuthContext);
 
