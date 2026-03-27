@@ -18,7 +18,7 @@ export default function Marketplace() {
   const [selectedTeacher, setSelectedTeacher] = useState(null);
   const [selectedSlot, setSelectedSlot] = useState('');
 
-  const categories = ['All', 'Programming', 'Design', 'Languages', 'Business', 'Music'];
+  const categories = ['All', 'Programming', 'Design', 'Languages', 'Business', 'Music', 'Subject'];
 
   useEffect(() => {
     const fetchTeachers = async () => {
