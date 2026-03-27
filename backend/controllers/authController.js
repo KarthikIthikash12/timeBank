@@ -173,7 +173,7 @@ const googleLogin = async (req, res) => {
         name,
         email,
         googleId,
-        profilePicture: googlePhotoUrl,
+        profilePicture: picture,
       });
     }
     const timebankToken = jwt.sign(
