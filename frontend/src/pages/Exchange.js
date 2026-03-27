@@ -13,6 +13,7 @@ export default function Exchange() {
   const [duration, setDuration] = useState(60);
   const [slots, setSlots] = useState([]);
   const [newSlot, setNewSlot] = useState('');
+  // const [message, setMessage] = useState('');
   const [sessionTitle, setSessionTitle] = useState('');
   const [topics, setTopics] = useState('');
   const [category, setCategory] = useState('Programming');
@@ -94,11 +95,11 @@ export default function Exchange() {
         <p style={{ color: '#64748b', marginBottom: '2rem' }}>Control your teaching availability and session rules.</p>
 
         <div className="profile-card">
-          {message && (
+          {/* {message && (
             <div style={{ padding: '1rem', backgroundColor: '#ecfdf5', color: '#059669', borderRadius: '8px', marginBottom: '1.5rem', fontWeight: '600' }}>
               {message}
             </div>
-          )}
+          )} */}
 
           <form onSubmit={handleSaveTeacherSettings}>
             <div className="profile-form-group">
